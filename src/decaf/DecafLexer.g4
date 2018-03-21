@@ -111,6 +111,6 @@ AND_B: '&';
 OR_B: '|';
 
 
-//Terrmino
+//Termino
 SEMI: ';';
 COMMA: ',';
