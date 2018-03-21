@@ -31,10 +31,25 @@ class Main {
 
 		        			switch (token.getType())
 		        			{
+						case DecafLexer.BOOLEANLITERAL:
+							type = " BOOLEANLITERAL " ;
+							break;
 		        			case DecafLexer.ID:
-		        				type = " IDENTIFIER";
+		        				type = " IDENTIFIER ";
 		        				break;
-		        			}
+    						case DecafLexer.SL_COMMENT:
+    							type = " COMMENT ";
+    							break;
+    						case DecafLexer.CHAR_LITERAL:
+    							type = " CHARLITERAL ";
+    							break;				
+    						case DecafLexer.STRING:
+    							type = " STRINGLITERAL ";
+    							break;
+						case DecafLexer.INTLITERAL:
+							type = " INTLITERAL";
+							break;
+    		        		}
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}
 		        		done = true;
