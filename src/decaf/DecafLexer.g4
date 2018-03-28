@@ -14,6 +14,7 @@ tokens
   TK_class
 }
 
+
 //Separadores
 LCURLY : '{';
 RCURLY : '}';
@@ -21,6 +22,7 @@ LSQUARE: '[';
 RSQUARE: ']';
 LPARENT: '(';
 RPARENT: ')';
+
 
 //Palavras reservadas
 PROGRAM: 'Program';
@@ -51,11 +53,12 @@ SINGLE_CHARACTER : ~["'\\];
 fragment
 ESCAPE_SEQUENCE : '\\' [tnfr"'\\];
 
-
 STRING : '"' (ESC|~'"')* '"';
+
 
 //Números inteiros e hexadecimal
 INTLITERAL: INTEGER | HEX;
+
 
 //Inteiros
 fragment
@@ -63,6 +66,7 @@ INTEGER: INTEGER_NUMERAL;
 
 fragment
 INTEGER_NUMERAL: '0'| DIGITS_NON_ZERO(DIGITS)*;
+
 
 //Hexadecimal
 fragment
@@ -85,6 +89,7 @@ DIGIT: [0-9];
 fragment
 ESC :  '\\' ('n'|'"');
 
+
 //Operadores aritméticos
 SUB: '-';
 SUM: '+';
@@ -94,6 +99,7 @@ ATR: '=';
 MOD: '%';
 ATR_SUM: '+=';
 ATR_SUB: '-=';
+
 
 //Operadores lógicos
 EQUALS: '==';
@@ -105,6 +111,7 @@ LESSEQ: '<=';
 AND: '&&';
 OR: '||';
 NEG: '!';
+
 
 //Operadores binários
 AND_B: '&';
