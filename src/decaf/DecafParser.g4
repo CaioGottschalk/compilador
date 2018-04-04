@@ -26,3 +26,13 @@ method_decl: (type | VOID) ID LPARENT method_block* RPARENT block ;
 method_block: method_fragment (COMMA method_fragment)*;
 
 method_fragment: type ID;
+
+//Bloco
+block: LCURLY var_decl* statement* RCURLY;
+
+//Variavel
+var_decl: var_fragment (COMMA ID)* SEMI;
+
+var_fragment: type ID ;
+
+type: INT | BOOLEAN ;
