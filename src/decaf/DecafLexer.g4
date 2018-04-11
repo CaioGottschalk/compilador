@@ -11,7 +11,7 @@ options
 
 tokens
 {
-  TK_class
+  TK_class;
 }
 
 
